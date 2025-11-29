@@ -1,0 +1,113 @@
+/* Contact Page Styles - Neon AnimeVerse Theme */
+
+/* Hero Section */
+.contact-hero {
+    text-align: center;
+    padding: 120px 50px;
+    background: linear-gradient(135deg, rgba(184, 41, 227, 0.2), rgba(0, 212, 255, 0.2)),
+                url('https://images.unsplash.com/photo-1578632767115-351597cf2477?w=1600') center/cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent, var(--dark-bg));
+}
+
+.contact-hero h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--electric-blue);
+    text-shadow: 0 0 15px var(--electric-blue), 0 0 25px var(--neon-purple);
+    position: relative;
+    z-index: 1;
+}
+
+.contact-hero p {
+    font-size: 18px;
+    color: var(--text-gray);
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Contact Form Section */
+.contact-section {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid var(--neon-purple);
+    box-shadow: 0 0 20px rgba(184, 41, 227, 0.3);
+}
+
+.contact-section label {
+    font-weight: 600;
+    color: var(--electric-blue);
+    letter-spacing: 0.5px;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #1a1a2e;
+    background: var(--darker-bg);
+    color: var(--text-light);
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+    outline: none;
+    border-color: var(--neon-purple);
+    box-shadow: 0 0 15px rgba(184, 41, 227, 0.5);
+}
+
+.contact-section button {
+    align-self: flex-start;
+    padding: 12px 30px;
+    background: linear-gradient(45deg, var(--neon-purple), var(--electric-blue));
+    color: var(--text-light);
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 16px;
+}
+
+.contact-section button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(184, 41, 227, 0.6), 0 0 30px rgba(0, 212, 255, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 30px 15px;
+    }
+
+    .contact-hero h1 {
+        font-size: 36px;
+    }
+
+    .contact-hero {
+        padding: 80px 20px;
+    }
+}

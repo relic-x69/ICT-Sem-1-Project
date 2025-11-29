@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - AnimeVerse</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="logo">ANIMEVERSE</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html" class="active">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="section">
+            <h2 class="section-title">All Products</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterProducts('all')">All</button>
+                <button class="filter-btn" onclick="filterProducts('apparel')">Apparel</button>
+                <button class="filter-btn" onclick="filterProducts('figures')">Figures</button>
+                <button class="filter-btn" onclick="filterProducts('accessories')">Accessories</button>
+            </div>
+            <div class="products-grid" id="productsGrid"></div>
+        </section>
+    </main>
+
+      <!-- BUY CONFIRMATION POPUP -->
+    <div class="modal" id="buyModal">
+        <div class="modal-content">
+            <div class="modal-icon">🛍️</div>
+            <h2>Confirm Purchase</h2>
+            <p id="productName">Product Name</p>
+            <p class="price" id="productPrice">$0.00</p>
+            <div class="modal-buttons">
+                <button class="btn-yes" onclick="confirmPurchase()">Yes, Buy</button>
+                <button class="btn-no" onclick="cancelPurchase()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SUCCESS POPUP -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">✅</div>
+            <h2>Order Confirmed!</h2>
+            <p>Thank you for your purchase!</p>
+            <p>Your order will be shipped soon.</p>
+            <br>
+            <button class="btn btn-primary" onclick="closeSuccess()">Continue Shopping</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ANIMEVERSE</h3>
+                <p>Your ultimate destination for authentic anime merchandise. We bring the world of anime to your doorstep with premium quality products and exceptional service.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 AnimeVerse. All rights reserved. Made with ❤️ for anime fans.</p>
+        </div>
+    </footer>
+
+    <script src="common.js"></script>
+    <script src="shop.js"></script>
+</body>
+</html>
